@@ -2,8 +2,8 @@
 
 
 ## Dashboard Animation
+![Dashboard Preview](meu_gif_completo.gif)
 
-[![Dashboard Preview](dashboards/meu_gif_completo.gif)](https://github.com/DanyCSantana/sql-python-powerbi-sales-insights)
 
 ## 📌 Project Overview
 This project analyzes the performance of **Diageo** and competitors in the Iowa liquor market using the **Iowa Liquor Sales open dataset**.  
