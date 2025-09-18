@@ -1,15 +1,10 @@
 # 🥃 SQL + Python + Power BI: End-to-End Market Insights Project (Diageo Case Study)
 
-## Dashboard Animation
+## Final Dashboard Animation
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/DanyCSantana/sql-python-powerbi-sales-insights/main/meu_gif_completo.gif" width="600">
 </p>
-
-
-## Dashboard Animation
-![Dashboard Preview](meu_gif_completo.gif)
-
 
 ## 📌 Project Overview
 This project analyzes the performance of **Diageo** and competitors in the Iowa liquor market using the **Iowa Liquor Sales open dataset**.  
