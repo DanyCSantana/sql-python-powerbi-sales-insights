@@ -1,49 +1,85 @@
-# 🥃 Diageo Market Analysis – Iowa Liquor Sales
+# 🥃 SQL + Python + Power BI: End-to-End Market Insights Project (Diageo Case Study)
 
 ## 📌 Project Overview
-This project analyzes the performance of **Diageo** and competitors in the Iowa liquor market using the open-source **Iowa Liquor Sales dataset**.  
-It combines **data engineering, data visualization, and business storytelling** to deliver insights about sales, categories, vendors, and geographic trends.  
+This project analyzes the performance of **Diageo** and competitors in the Iowa liquor market using the **Iowa Liquor Sales open dataset**.  
+It demonstrates the full data lifecycle: **data engineering, cleaning, enrichment, visualization, and executive storytelling**.
 
-The project simulates a **real-world business case**: understanding market position, identifying growth opportunities, and presenting results to stakeholders.
+The goal was to simulate a **real business case**: preparing raw transactional data, creating analytical datasets, exploring trends with Power BI, and delivering actionable insights in an executive presentation.
 
 ---
 
 ## 🔄 Workflow
-1. **Data Preparation (Python + DuckDB)**
-   - Cleaned raw sales data (5+ years of transactions).
+1. **Data Preparation (SQL + Python + DuckDB)**
+   - Loaded and cleaned **26M+ rows** of raw liquor sales transactions.
    - Standardized vendor and category names.
-   - Built **dimension tables** (`dim_items` and `dim_stores`) with unique and enriched attributes.
-   - Exported final dataset in **Parquet format** for efficient analysis.
+   - Built **dimension tables**:
+     - `dim_items`: unique item descriptions.
+     - `dim_stores`: best available store names, most common cities/counties.
+   - Filtered dataset to **April 2018 – March 2023** for recency and consistency.
+   - Exported clean data in **Parquet format**.
 
-2. **Data Analysis & Visualization (Power BI)**
-   - Created dashboards to explore:
+2. **Data Analysis (Power BI)**
+   - Created dashboards with KPIs and trends:
      - Market share by vendor.
      - Sales trends over time.
      - Top categories and items.
-     - Geographic performance (cities & counties).
-     - Pricing and volume insights.
+     - Geographic breakdown by city and county.
+     - Pricing vs. sales volume analysis.
 
 3. **Business Storytelling (PowerPoint)**
-   - Summarized key insights in an executive-friendly presentation.
-   - Highlighted competitive positioning of **Diageo vs. Sazerac and other vendors**.
-   - Provided actionable recommendations for strategic decisions.
+   - Executive presentation summarizing key findings.
+   - Clear comparison of **Diageo vs. competitors**.
+   - Actionable recommendations for market strategy.
 
 ---
 
-## 📊 Key Insights
-- **Diageo leads in sales value ($),** but competitors like **Sazerac** dominate in **volume (units sold)**.  
-- Certain categories (e.g., whiskey and vodka) show strong competition and require targeted strategies.  
-- Geographic analysis revealed **regional concentration of sales**, with opportunities for expansion in underpenetrated cities.  
-- Price positioning impacts both sales volume and total revenue, suggesting different strategies for premium vs. mass-market products.
+## 📊 Dataset Context
+- Source: **Iowa Liquor Sales dataset** (public, open-source, provided by the State of Iowa).
+- Size: **26,160,915 rows** and **24 columns**.
+- Timeframe: **Jan 2012 – Mar 2023** (filtered to **Apr 2018 – Mar 2023** for analysis).
+- Fields include:
+  - Store details (number, name, city, county, location).
+  - Vendor details (number, name).
+  - Product details (item number, description, category).
+  - Sales metrics (bottle size, bottles sold, retail price, total sales, volume sold).
 
 ---
 
-## 🛠️ Tech Stack
-- **Python** (pandas, duckdb) → Data cleaning & ETL  
-- **DuckDB** → SQL queries on large CSVs & Parquet  
-- **Power BI** → Interactive dashboards  
-- **PowerPoint** → Executive storytelling  
+## 🧹 Data Challenges & Cleaning
+During preparation, several issues were addressed:
+- **Inconsistent category names** → fixed using `COALESCE` and external mapping file.  
+- **Vendors with multiple names** → standardized into groups (e.g., “DIAGEO”, “SAZERAC”).  
+- **Duplicate item descriptions** → resolved using `ROW_NUMBER()` and keeping the most sold version.  
+- **Store names/cities inconsistent** → selected best available name and most frequent city/county per store.  
+- **Invalid numeric values (0 or NULL)** → filtered out in the final dataset.  
+
+---
+
+## 📈 Key Insights
+- **Diageo leads in revenue ($)** but competitors like **Sazerac** dominate in **volume (units sold)**.  
+- **Vodka and whiskey categories** are highly competitive and represent growth opportunities.  
+- **Geographic concentration**: major cities (e.g., Des Moines, Cedar Rapids) drive the bulk of sales.  
+- **Price positioning**: premium brands sell fewer bottles but drive higher total revenue.  
+
+---
+
+## 🛠️ Tech Stack & Justification
+- **DuckDB** → fast SQL queries on large CSV/Parquet files locally.  
+- **Python (pandas)** → additional cleaning and category mapping from Excel.  
+- **SQL** → heavy data transformations and enrichment logic.  
+- **Power BI** → interactive dashboards for business exploration.  
+- **PowerPoint** → final storytelling layer for executives.  
 
 ---
 
 ## 📂 Repository Structure
+
+## Project Structure
+
+```text
+├── notebooks/        # Jupyter notebooks with SQL + Python cleaning
+├── data/             # Raw & processed data (not included in repo)
+├── outputs/          # Exported dimension tables (Parquet)
+├── dashboards/       # Power BI dashboards (PDF/PNG exports)
+├── presentation/     # Executive slides (PDF/PPTX)
+└── README.md         # Project documentation
