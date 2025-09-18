@@ -3,8 +3,9 @@
 ## Dashboard Animation
 
 <p align="center">
-  <img src="dashboards/meu_gif_completo.gif" width="600">
+  <img src="https://raw.githubusercontent.com/DanyCSantana/sql-python-powerbi-sales-insights/main/meu_gif_completo.gif" width="600">
 </p>
+
 
 ## Dashboard Animation
 ![Dashboard Preview](meu_gif_completo.gif)
