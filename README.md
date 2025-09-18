@@ -4,11 +4,28 @@
 
 # 🥃 SQL + Python + Power BI: End-to-End Market Insights Project (Diageo Case Study)
 
-## Final Dashboard Animation
+---
+
+## 📖 Table of Contents
+- [Final Dashboard Animation](#-final-dashboard-animation)
+- [Project Overview](#-project-overview)
+- [Workflow](#-workflow)
+- [Dataset Context](#-dataset-context)
+- [Data Challenges & Cleaning](#-data-challenges--cleaning)
+- [Key Insights](#-key-insights)
+- [Tech Stack & Justification](#-tech-stack--justification)
+- [Presentation Preview](#-presentation-preview)
+- [Repository Structure](#-repository-structure)
+
+---
+
+## 🎥 Final Dashboard Animation
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/DanyCSantana/sql-python-powerbi-sales-insights/main/meu_gif_completo.gif" width="600">
 </p>
+
+---
 
 ## 📌 Project Overview
 This project analyzes the performance of **Diageo** and competitors in the Iowa liquor market using the **Iowa Liquor Sales open dataset**.  
@@ -81,18 +98,21 @@ During preparation, several issues were addressed:
 - **PowerPoint** → final storytelling layer for executives.  
 
 ---
-## Presentation Preview
 
-![Presentation Preview](Diageo_Presentation.gif)
+## 🎞 Presentation Preview
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DanyCSantana/sql-python-powerbi-sales-insights/main/Diageo_Presentation.gif" width="700">
+</p>
+
+---
 
 ## 📂 Repository Structure
-
-## Project Structure
 
 ```text
 ├── notebooks/        # Jupyter notebooks with SQL + Python cleaning
 ├── data/             # Raw & processed data (not included in repo)
 ├── outputs/          # Exported dimension tables (Parquet)
-├── dashboards/       # Power BI dashboards (PDF/PNG exports)
-├── presentation/     # Executive slides (PDF/PPTX)
+├── dashboards/       # Power BI dashboards (PDF/PNG exports + GIFs)
+├── presentation/     # Executive slides (PDF/PPTX + GIF animation)
 └── README.md         # Project documentation
