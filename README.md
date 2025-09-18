@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Power BI](https://img.shields.io/badge/Power%20BI-Data%20Visualization-green)
+![GitHub](https://img.shields.io/badge/GitHub-Repo-black)
+
 # 🥃 SQL + Python + Power BI: End-to-End Market Insights Project (Diageo Case Study)
 
 ## Final Dashboard Animation
