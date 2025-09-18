@@ -81,6 +81,9 @@ During preparation, several issues were addressed:
 - **PowerPoint** → final storytelling layer for executives.  
 
 ---
+## Presentation Preview
+
+![Presentation Preview](Diageo_Presentation.gif)
 
 ## 📂 Repository Structure
 
