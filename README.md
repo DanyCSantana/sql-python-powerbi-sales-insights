@@ -1,5 +1,10 @@
 # 🥃 SQL + Python + Power BI: End-to-End Market Insights Project (Diageo Case Study)
 
+## Dashboard Animation
+
+<p align="center">
+  <img src="dashboards/meu_gif_completo.gif" width="600">
+</p>
 
 ## Dashboard Animation
 ![Dashboard Preview](meu_gif_completo.gif)
